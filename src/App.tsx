@@ -1,8 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.sass';
 
 function App() {
+
+  function handleClick (e: number): void {
+    console.log(e);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +23,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => handleClick(321)}>Click</button>
       </header>
     </div>
   );
